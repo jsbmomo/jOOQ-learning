@@ -13,7 +13,7 @@ spring:
     # url: jdbc:h2:~/test   # embedded Mode
     url: 'jdbc:h2:file:./build/data/test;AUTO_SERVER=TRUE;'
     username: sa
-    password: test
+    password:
   h2:
     console:
       enabled: true
