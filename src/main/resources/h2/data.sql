@@ -6,7 +6,7 @@ insert into member (name, age, address, email, reg_dt) values ('홍길동', 20, 
 insert into member (name, age, address, email, reg_dt) values ('이흥선', 25, '대한민국 인천', 'lee@naver.com', now());
 insert into member (name, age, address, email, reg_dt) values ('Mr.Kim', 21, '대한민국 광주', 'kim21@naver.com', now());
 insert into member (name, age, address, email, reg_dt) values ('김규하', 28, '대한민국 울산', 'kim28@naver.com', now());
-insert into member (name, age, address, email, reg_dt) values ('진민수', 30, '대한민국 부산', 'jin@naver.com', now());
+insert into member (name, age, address, email, reg_dt) values ('진민수', 30, '대한민국 울산', 'jin@naver.com', now());
 
 insert into product (prod_name, prod_price) values ('노트북', 3200000);
 insert into product (prod_name, prod_price) values ('모니터', 550000);

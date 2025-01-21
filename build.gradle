@@ -43,7 +43,7 @@ dependencies {
 flyway {
 	url = "jdbc:h2:file:${projectDir}/build/data/test;"
 	user = 'sa'
-	password = 'test'
+	password =
 	schemas = ['PUBLIC']  // H2 에서는 대문자 사용
 }
 
@@ -61,7 +61,7 @@ jooq {
 					driver = 'org.h2.Driver'
 					url = "jdbc:h2:file:${projectDir}/build/data/test;"
 					user = 'sa'
-					password = 'test'
+					password =
 					properties {
 						property {
 							key = 'PAGE_SIZE'
@@ -105,6 +105,6 @@ jooq {
 	}
 }
 
-/*tasks.named('test') {
+tasks.named('test') {
 	useJUnitPlatform()
-}*/
+}
