@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 public class PurchaseProductDto {
 
-  private Purchase purchase;
-  private Product member;
+  private String place;
+  private int sales;
 
 }
