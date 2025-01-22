@@ -23,7 +23,7 @@ CREATE TABLE product
 
 DROP TABLE IF EXISTS purchase_history;
 
-CREATE TABLE purchase_history
+CREATE TABLE purchase
 (
     history_id  BIGINT         NOT NULL AUTO_INCREMENT,
     prod_id     BIGINT,

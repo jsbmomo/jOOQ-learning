@@ -31,7 +31,7 @@ dependencies {
 	implementation 'com.h2database:h2'
 
 	implementation 'org.springframework.boot:spring-boot-starter-jooq'
-	jooqGenerator 'org.jooq:jooq-meta-extensions:'  + dependencyManagement.importedProperties['jooq.version']
+	jooqGenerator 'org.jooq:jooq-meta-extensions:' + dependencyManagement.importedProperties['jooq.version']
 	jooqGenerator 'com.h2database:h2'
 
 	compileOnly 'org.projectlombok:lombok'
@@ -41,9 +41,9 @@ dependencies {
 }
 
 flyway {
-	url = "jdbc:h2:file:${projectDir}/build/data/test;"
+	url = "jdbc:h2:file:${projectDir}/build/data/test;AUTO_SERVER=TRUE"
 	user = 'sa'
-	password =
+	password = ''
 	schemas = ['PUBLIC']  // H2 에서는 대문자 사용
 }
 
@@ -59,9 +59,9 @@ jooq {
 				logging = org.jooq.meta.jaxb.Logging.WARN
 				jdbc {
 					driver = 'org.h2.Driver'
-					url = "jdbc:h2:file:${projectDir}/build/data/test;"
+					url = "jdbc:h2:file:${projectDir}/build/data/test;AUTO_SERVER=TRUE"
 					user = 'sa'
-					password =
+					password = ''
 					properties {
 						property {
 							key = 'PAGE_SIZE'
@@ -92,7 +92,6 @@ jooq {
 						records = true
 						immutablePojos = true
 						fluentSetters = true
-						javaTimeTypes = true
 					}
 					target {
 						packageName = 'com.spring.jooq'

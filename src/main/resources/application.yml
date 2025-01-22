@@ -5,13 +5,16 @@ spring:
   application:
     name: jooq
   flyway:
+    enabled: true # default
+    locations: classpath:db/migration/h2
     baseline-on-migrate: true
     baseline-version: 0
+    schemas: test
   datasource:
     driver-class-name: org.h2.Driver
     # url: jdbc:h2:mem:test # In-Memory mode
     # url: jdbc:h2:~/test   # embedded Mode
-    url: 'jdbc:h2:file:./build/data/test;AUTO_SERVER=TRUE;'
+    url: 'jdbc:h2:file:./build/data/test;AUTO_SERVER=TRUE'
     username: sa
     password:
   h2:
@@ -26,8 +29,8 @@ spring:
     init:
       mode: always
       encoding: utf-8
-      schema-locations: classpath:h2/schema.sql
-      data-locations: classpath:h2/data.sql
+      # schema-locations: classpath:h2/schema.sql
+      # data-locations: classpath:h2/data.sql
 
 logging:
   level:
