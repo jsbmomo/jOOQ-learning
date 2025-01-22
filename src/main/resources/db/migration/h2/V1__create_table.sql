@@ -26,7 +26,8 @@ DROP TABLE IF EXISTS purchase_history;
 CREATE TABLE purchase
 (
     history_id  BIGINT         NOT NULL AUTO_INCREMENT,
-    prod_id     BIGINT,
-    user_id     BIGINT,
+    prod_id     BIGINT         NOT NULL,
+    user_id     BIGINT         NOT NULL,
+    place       VARCHAR(255),
     PRIMARY KEY (history_id)
 );
